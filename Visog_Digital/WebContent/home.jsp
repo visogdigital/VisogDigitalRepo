@@ -24,14 +24,15 @@
 <body>
 <div class = "page-header"> 
 <div class="logout">
+<%User user = (User) session.getAttribute("User"); %>
+<h3>Hi <%=user.getName() %></h3>
   <form action="Logout" method="post">
 <input type="submit" class="btn btn-danger" value="Logout" >
 </form>
   </div> 
 </div>
 <div class="center">
-<%User user = (User) session.getAttribute("User"); %>
-<h3>Hi <%=user.getName() %></h3>
+
 <strong>Your Email</strong>: <%=user.getEmail() %><br>
 <strong>Your Country</strong>: <%=user.getCountry() %><br>
 <br>

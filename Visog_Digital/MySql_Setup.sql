@@ -1,13 +1,19 @@
 -- login with root to create user, DB and table and provide grants
  
-create user 'pankaj'@'localhost' identified by 'pankaj123';
 
-grant all on *.* to 'pankaj'@'localhost' identified by 'pankaj123';
 
-create database UserDB;
+create database DigitalMarket;
 
-use UserDB;
+use DigitalMarket;
 
+create table login(
+					email varchar(30),
+                    pass varchar(20)
+                    );
+
+insert into login(email,pass) values('rahul@gmail.com',123456);  
+                    
+                    
 drop table if exists `Users`;
 CREATE TABLE `Users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
